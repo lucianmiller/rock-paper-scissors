@@ -36,5 +36,19 @@ namespace RockPaperScissors.Tests
       //Result
       Assert.AreEqual(turn, rock);
     }
+
+    [TestMethod]
+    public void Player2Turn_SelectRock_Game()
+    {
+      //Arrange
+      string turn = "rock";
+
+      //Act
+      Game newGame = new Game("scissors", "rock");
+      string rock = newGame.Player2Turn;
+
+      //Result
+      Assert.AreEqual(turn, rock);
+    }
   }
 }
