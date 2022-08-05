@@ -19,36 +19,19 @@ namespace RockPaperScissors.Tests
     [TestMethod]
     public void GameConstructor_CreateInstanceOfGame_Game()
     {
-      Game newGame = new Game("rock", "paper");
+      Game newGame = new Game("Bob", "Sally");
       Assert.AreEqual(typeof(Game), newGame.GetType());
     }
 
     [TestMethod]
-    public void Player1Turn_SelectRock_Game()
+    public void GameConstructor_StoresValuesCorrectly_Game()
     {
       //Arrange
-      string turn = "rock";
+      Game newGame = new Game("Bob", "Sally");
 
-      //Act
-      Game newGame = new Game("rock", "paper");
-      string rock = newGame.Player1Turn;
-
-      //Result
-      Assert.AreEqual(turn, rock);
-    }
-
-    [TestMethod]
-    public void Player2Turn_SelectRock_Game()
-    {
-      //Arrange
-      string turn = "rock";
-
-      //Act
-      Game newGame = new Game("scissors", "rock");
-      string rock = newGame.Player2Turn;
-
-      //Result
-      Assert.AreEqual(turn, rock);
+      //Assert
+      Assert.AreEqual("Bob", newGame.Player1Name);
+      Assert.AreEqual("Sally", newGame.Player2Name);
     }
   }
 }
