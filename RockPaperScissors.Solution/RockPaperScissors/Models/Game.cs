@@ -42,7 +42,11 @@ namespace RockPaperScissors.Models
         Console.WriteLine("Would you like to play a round? (y or n)");
         continueGame = Console.ReadLine();
 
-        Console.WriteLine(newGame.ComputerTurn());
+        Console.WriteLine("Enter Rock, Paper, Scissors:");
+        string playerOneTurn = Console.ReadLine();
+        string playerTwoTurn = newGame.ComputerTurn();
+        Console.WriteLine(playerOneTurn);
+        Console.WriteLine(playerTwoTurn);
       }
       Console.WriteLine("Game Over!");
     }
